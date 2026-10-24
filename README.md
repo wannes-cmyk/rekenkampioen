@@ -2,7 +2,7 @@
 
 Een klein browserspelletje om tafels, plus en min en kloklezen te oefenen, gemaakt voor het 2de en 3de leerjaar.
 
-Live: https://wannes-cmyk.github.io/rekenkampioen/
+Live: https://rekenkampioen.wannesdeloore.be/
 
 ## Hoe werkt het
 
