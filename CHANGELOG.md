@@ -10,6 +10,7 @@ De versies tot en met 1.2.0 zijn achteraf samengesteld uit de git-geschiedenis v
 
 ### Toegevoegd
 
+- Confetti op het resultaatscherm wanneer een oefenronde afgerond is. Toestellen met "minder beweging" ingesteld zien geen confetti.
 - `CLAUDE.md` met afspraken voor elke sessie: doelgroep lagere school, branch per feature, commitstijl, commentaar en changelog.
 - Dit changelogbestand.
 

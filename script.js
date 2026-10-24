@@ -848,6 +848,35 @@ function showResults() {
   resultScore.textContent = `${state.correctCount} van de ${state.totalQuestions} goed - ${state.score} punten`;
 
   saveRoundToHistory();
+  launchConfetti();
+}
+
+// Confetti bij het einde van elke ronde, ook bij weinig juiste antwoorden:
+// kinderen vieren dat ze de hele ronde hebben afgewerkt, niet enkel de score.
+// Kleine DOM-stukjes met CSS-animatie, zodat er geen extra script nodig is.
+function launchConfetti() {
+  // Wie beweging liever vermijdt, krijgt geen confetti.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const colors = ['#f582ae', '#8bd3dd', '#f3d2c1', '#6bcf7f', '#f4a259', '#172c66'];
+  const layer = document.createElement('div');
+  layer.className = 'confetti-layer';
+  layer.setAttribute('aria-hidden', 'true');
+
+  for (let i = 0; i < 60; i++) {
+    const piece = document.createElement('span');
+    piece.className = 'confetti-piece';
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.background = colors[i % colors.length];
+    piece.style.animationDelay = `${Math.random() * 0.8}s`;
+    piece.style.animationDuration = `${2.2 + Math.random() * 1.6}s`;
+    piece.style.setProperty('--drift', `${Math.round(Math.random() * 160 - 80)}px`);
+    layer.appendChild(piece);
+  }
+
+  document.body.appendChild(layer);
+  // Opruimen nadat de laatste stukjes gevallen zijn.
+  setTimeout(() => layer.remove(), 5000);
 }
 
 function showScreen(screen) {
