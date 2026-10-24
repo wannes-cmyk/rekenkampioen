@@ -446,3 +446,29 @@ h1 {
   background: var(--primary);
   outline: none;
 }
+
+/* Confetti op het resultaatscherm; laat klikken door naar de knoppen eronder. */
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  opacity: 0;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes confetti-fall {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  100% { opacity: 1; transform: translate(var(--drift), 105vh) rotate(720deg); }
+}

@@ -24,7 +24,7 @@ Live: https://rekenkampioen.wannesdeloore.be/
      - Foute meerkeuze-opties zijn bewust plausibel (bv. "kwart voor zeven" in plaats van "kwart voor acht") - dat zijn de typische fouten bij het aanleren van klokkijken.
 4. Kies het aantal oefeningen (10, 20, 30 of 50) en of de timer aan moet staan (standaard 10 seconden per vraag zodat er niet te lang nagedacht wordt). Deze opties gelden voor alle leerjaren en oefenvormen.
 5. Beantwoord de sommen door het antwoord in te typen en op "Check!" te drukken (of Enter).
-6. Op het einde krijg je je score en 1 tot 3 sterren.
+6. Op het einde krijg je je score en 1 tot 3 sterren, met confetti om de afgewerkte ronde te vieren. Heeft het toestel "minder beweging" ingesteld, dan blijft de confetti weg.
 
 ## Werkblad afdrukken
 
