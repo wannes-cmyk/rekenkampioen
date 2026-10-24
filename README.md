@@ -53,6 +53,7 @@ De live versie gebruikt [Simple Analytics](https://www.simpleanalytics.com/) voo
 Zuiver HTML, CSS en vanilla JavaScript, plus [jsPDF](https://github.com/parallax/jsPDF) (via CDN) voor de PDF-export. Geen build-stap. Werkt offline (behalve de PDF-export, die de jsPDF-library nodig heeft) en op mobiel/tablet.
 
 - `index.html` - structuur van de vier schermen (start, quiz, resultaat, overzicht)
+- `bedankt.html` - bedankpagina na het feedbackformulier
 - `style.css` - kleurrijke, kindvriendelijke styling
 - `script.js` - spellogica: vragen genereren voor tafels, hoofdrekenen (splitsen, brug over het tiental, optellen/aftrekken tot 100 of 1000) én digitaal kloklezen (meerkeuze en klok instellen, 5 niveaus, optioneel 24-uursnotatie), timer, score bijhouden, geschiedenis in localStorage, PDF-export van rondes en printbare werkbladen
 
