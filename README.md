@@ -59,3 +59,5 @@ Zuiver HTML, CSS en vanilla JavaScript, plus [jsPDF](https://github.com/parallax
 MIT-licentie, zie [LICENSE](./LICENSE). Je mag de code vrij gebruiken, aanpassen en delen.
 
 Dit is een persoonlijk project. Geen support, use as is.
+
+Feedback of een probleem? Gebruik de 💬-knop in de app of het [feedbackformulier](https://tally.so/r/9NqjjV). Ik lees alles, maar kan niet beloven dat ik overal op reageer.
