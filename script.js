@@ -550,7 +550,7 @@ function timeWords(hourRaw, minute) {
     case 5: return `vijf over ${hourWord}`;
     case 10: return `tien over ${hourWord}`;
     case 15: return `kwart na ${hourWord}`;
-    case 20: return `tien voor half ${nextHourWord}`;
+    case 20: return `twintig over ${hourWord}`;
     case 25: return `vijf voor half ${nextHourWord}`;
     case 30: return `half ${nextHourWord}`;
     case 35: return `vijf over half ${nextHourWord}`;
