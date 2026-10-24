@@ -46,6 +46,8 @@ Elke gespeelde ronde wordt lokaal opgeslagen in de browser (localStorage), met p
 
 De geschiedenis is lokaal per browser/toestel - ze wordt niet gedeeld of online opgeslagen.
 
+De live versie gebruikt [Simple Analytics](https://www.simpleanalytics.com/) voor anonieme bezoekcijfers. Geen cookies en geen persoonsgegevens. De oefenresultaten van kinderen worden niet gemeten.
+
 ## Techniek
 
 Zuiver HTML, CSS en vanilla JavaScript, plus [jsPDF](https://github.com/parallax/jsPDF) (via CDN) voor de PDF-export. Geen build-stap. Werkt offline (behalve de PDF-export, die de jsPDF-library nodig heeft) en op mobiel/tablet.
