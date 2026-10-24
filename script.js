@@ -1,4 +1,4 @@
-// Tafels Kampioen - maal-/deeltafels, hoofdrekenen en digitaal kloklezen voor 2de en 3de leerjaar
+// Rekenkampioen - maal-/deeltafels, hoofdrekenen en digitaal kloklezen voor 2de en 3de leerjaar
 
 const TABLES_BY_GRADE = {
   2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -51,7 +51,9 @@ const CLOCK_QUESTIONTYPE_LABELS = {
 
 const WORKSHEET_FULL_PAGE_COUNT = 60; // zoveel sommen passen op één A4 in 3 kolommen
 const TIME_PER_QUESTION_MS = 10000; // 10 seconden per vraag, als de timer aan staat
-const HISTORY_KEY = 'tafelspelGeschiedenis';
+const HISTORY_KEY = 'rekenkampioenGeschiedenis';
+// Oude sleutel uit de tijd van het tafelspel. We lezen hem nog, zodat bestaande geschiedenis niet verdwijnt.
+const LEGACY_HISTORY_KEY = 'tafelspelGeschiedenis';
 const MAX_HISTORY_SESSIONS = 20;
 
 const state = {
@@ -838,7 +840,7 @@ function showResults() {
   starsEl.textContent = '⭐'.repeat(stars) + '☆'.repeat(3 - stars);
 
   const messages = {
-    3: 'Wauw, jij bent een echte tafels kampioen!',
+    3: 'Wauw, jij bent een echte rekenkampioen!',
     2: 'Goed gedaan! Nog even oefenen en het zit helemaal snor.',
     1: 'Mooie poging! Oefen nog wat en probeer opnieuw.',
   };
@@ -856,7 +858,7 @@ function showScreen(screen) {
 // ---- Geschiedenis (lokaal gecached) ----
 function loadHistory() {
   try {
-    const raw = localStorage.getItem(HISTORY_KEY);
+    const raw = localStorage.getItem(HISTORY_KEY) || localStorage.getItem(LEGACY_HISTORY_KEY);
     return raw ? JSON.parse(raw) : [];
   } catch (err) {
     return [];
@@ -1007,7 +1009,7 @@ function downloadSessionAsPdf(session) {
 
   doc.setFontSize(18);
   doc.setTextColor(23, 44, 102);
-  doc.text('Tafels Kampioen - Overzicht', margin, y);
+  doc.text('Rekenkampioen - Overzicht', margin, y);
   y += 10;
 
   doc.setFontSize(11);
@@ -1069,7 +1071,7 @@ function downloadWorksheetPdf(count) {
   let y = margin;
   doc.setFontSize(18);
   doc.setTextColor(23, 44, 102);
-  doc.text('Tafels Kampioen - Werkblad', margin, y);
+  doc.text('Rekenkampioen - Werkblad', margin, y);
   y += 8;
 
   doc.setFontSize(11);
