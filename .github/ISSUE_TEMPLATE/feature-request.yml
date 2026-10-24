@@ -1,0 +1,29 @@
+name: Feature request
+description: Een idee of wens voor Rekenkampioen
+title: "Idee: "
+labels: ["enhancement", "idee"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vul geen namen of persoonlijke gegevens van kinderen in.
+  - type: textarea
+    id: wens
+    attributes:
+      label: Wat zou je graag willen?
+    validations:
+      required: true
+  - type: textarea
+    id: waarom
+    attributes:
+      label: Waarom is dat nuttig in de klas of thuis?
+  - type: dropdown
+    id: onderdeel
+    attributes:
+      label: Over welk onderdeel gaat het?
+      options:
+        - Tafels
+        - Hoofdrekenen
+        - Klok lezen
+        - Werkblad of PDF
+        - Iets anders
